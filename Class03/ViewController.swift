@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var lbmessage: UILabel!
+    
+
+    @IBAction func bt01(_ sender: UIButton) {
+        lbmessage.text="hi,happy"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
