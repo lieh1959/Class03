@@ -14,6 +14,7 @@
 		43EF017B2269C51400DFD32A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43EF01792269C51400DFD32A /* LaunchScreen.storyboard */; };
 		43EF01862269C51500DFD32A /* Class03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF01852269C51500DFD32A /* Class03Tests.swift */; };
 		43EF01912269C51500DFD32A /* Class03UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF01902269C51500DFD32A /* Class03UITests.swift */; };
+		99B4D3F3227FDEEC0095D780 /* MyBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B4D3F2227FDEEC0095D780 /* MyBrowserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		43EF018C2269C51500DFD32A /* Class03UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Class03UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43EF01902269C51500DFD32A /* Class03UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class03UITests.swift; sourceTree = "<group>"; };
 		43EF01922269C51500DFD32A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99B4D3F2227FDEEC0095D780 /* MyBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBrowserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				43EF01772269C51400DFD32A /* Assets.xcassets */,
 				43EF01792269C51400DFD32A /* LaunchScreen.storyboard */,
 				43EF017C2269C51400DFD32A /* Info.plist */,
+				99B4D3F2227FDEEC0095D780 /* MyBrowserViewController.swift */,
 			);
 			path = Class03;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43EF01732269C51200DFD32A /* ViewController.swift in Sources */,
+				99B4D3F3227FDEEC0095D780 /* MyBrowserViewController.swift in Sources */,
 				43EF01712269C51200DFD32A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
