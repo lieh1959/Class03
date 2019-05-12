@@ -12,19 +12,38 @@ class MyBrowserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Notification()
-
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-     super.viewWillAppear(<#T##animated: Bool##Bool#>)
+     super.viewWillDisappear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector:
+            #selector(keyboardWillAppear(notification:)),name:
+            UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector:
+            #selector(keyboardWillDisAppear(notification:)),name:
+            UIResponder.keyboardWillHideNotification, object: nil)
     }
-    override func viewWillDisappear(_ animated: Bool) {
-     super.viewWillDisappear(<#T##animated: Bool##Bool#>)
+    override func viewDidDisappear(_ animated: Bool) {
+     super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name:
+            UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.removeObserver(self, name:
+            UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func key
+    @objc func keyboardWillAppear(notification:NSNotification?){
+        print("keyboarWillAppear")
+    }
+    
+    @objc func keyboardWillDisAppear(notification:NSNotification?){
+        print("keyboarWillDisAppear")
+    }
     
     /*
     // MARK: - Navigation

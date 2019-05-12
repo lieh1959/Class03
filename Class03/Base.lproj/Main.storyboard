@@ -17,7 +17,22 @@
                     <view key="view" contentMode="scaleToFill" id="3hV-vz-YEH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6G-Nm-YOk">
+                                <rect key="frame" x="313" y="748" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZnT-yw-E0f">
+                                <rect key="frame" x="16" y="748" width="289" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="0.9691029044167131" green="0.51076556080363145" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e6G-Nm-YOk" firstAttribute="centerY" secondItem="ZnT-yw-E0f" secondAttribute="centerY" id="DRu-Cm-01P"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kLS-Uw-LW8"/>
                     </view>
                 </viewController>
@@ -77,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="1415.2" y="-302.21674876847294"/>
         </scene>
-        <!--View Controller-->
+        <!--My Browser View Controller-->
         <scene sceneID="qDS-S3-Izr">
             <objects>
-                <viewController id="Qku-ze-wyF" sceneMemberID="viewController">
+                <viewController id="Qku-ze-wyF" customClass="MyBrowserViewController" customModule="Class03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a1q-Ab-PKQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
