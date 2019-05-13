@@ -15,6 +15,7 @@
 		43EF01862269C51500DFD32A /* Class03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF01852269C51500DFD32A /* Class03Tests.swift */; };
 		43EF01912269C51500DFD32A /* Class03UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF01902269C51500DFD32A /* Class03UITests.swift */; };
 		99B4D3F3227FDEEC0095D780 /* MyBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B4D3F2227FDEEC0095D780 /* MyBrowserViewController.swift */; };
+		99DFF8E222891F89000A025A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DFF8E122891F88000A025A /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		43EF01902269C51500DFD32A /* Class03UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class03UITests.swift; sourceTree = "<group>"; };
 		43EF01922269C51500DFD32A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99B4D3F2227FDEEC0095D780 /* MyBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBrowserViewController.swift; sourceTree = "<group>"; };
+		99DFF8E122891F88000A025A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DFF8E222891F89000A025A /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				43EF01842269C51500DFD32A /* Class03Tests */,
 				43EF018F2269C51500DFD32A /* Class03UITests */,
 				43EF016E2269C51200DFD32A /* Products */,
+				99DFF8E022891F88000A025A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +130,14 @@
 				43EF01922269C51500DFD32A /* Info.plist */,
 			);
 			path = Class03UITests;
+			sourceTree = "<group>";
+		};
+		99DFF8E022891F88000A025A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99DFF8E122891F88000A025A /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
