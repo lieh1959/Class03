@@ -9,7 +9,10 @@
 import UIKit
 import WebKit
 
-class MyBrowserViewController: UIViewController,UITextFieldDelegate {
+class MyBrowserViewController: UIViewController,UITextFieldDelegate ,AsyncReponseDelegate{
+    
+    
+}{
     @IBOutlet weak var btnGoBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var myWebView: WKWebView!
     
@@ -17,8 +20,8 @@ class MyBrowserViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myWebView.load(URLRequest(url: URL(string:  "https://www.google.com")!))
-        // Do any additional setup after loading the view.
+       /* myWebView.load(URLRequest(url: URL(string:  "https://www.google.com")!))
+        Do any additional setup after loading the view. */
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +46,7 @@ class MyBrowserViewController: UIViewController,UITextFieldDelegate {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        
     }
     //Mark: -TextField
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -55,7 +59,11 @@ class MyBrowserViewController: UIViewController,UITextFieldDelegate {
         }
         
         
-        return true
+        let current = textField.text! as NSString
+        let newString : NSString =
+         current.replacingCharacters(in: range, with: string) as NSString
+        
+        return newString.length <= 10
     }
     
     @objc func keyboardWillAppear(notification:NSNotification?){
