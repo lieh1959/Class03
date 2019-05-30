@@ -10,7 +10,9 @@
 #endif
 #endif
 
+#import "SQLite.h"
+#import "SQLite-Bridging.h"
 
-FOUNDATION_EXPORT double SwiftyJSONVersionNumber;
-FOUNDATION_EXPORT const unsigned char SwiftyJSONVersionString[];
+FOUNDATION_EXPORT double SQLiteVersionNumber;
+FOUNDATION_EXPORT const unsigned char SQLiteVersionString[];
 
