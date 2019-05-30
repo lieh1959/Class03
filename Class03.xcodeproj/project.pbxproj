@@ -16,6 +16,8 @@
 		43EF01912269C51500DFD32A /* Class03UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF01902269C51500DFD32A /* Class03UITests.swift */; };
 		66118B1C498295846F6FC8F5 /* Pods_Class03Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F84F65CF270B7702A1184C4 /* Pods_Class03Tests.framework */; };
 		68DCE2CAA7275B1DD08B5F28 /* Pods_Class03UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5256F9FCD1DCC49A3E4E59C7 /* Pods_Class03UITests.framework */; };
+		994E6057229B895B00AAA540 /* FileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994E6056229B895B00AAA540 /* FileWorker.swift */; };
+		994E6059229FA57000AAA540 /* ServiceCategoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994E6058229FA57000AAA540 /* ServiceCategoryContext.swift */; };
 		9983B88122924E7200CF76E8 /* AsyncRequestWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9983B88022924E7200CF76E8 /* AsyncRequestWorker.swift */; };
 		99B4D3F3227FDEEC0095D780 /* MyBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B4D3F2227FDEEC0095D780 /* MyBrowserViewController.swift */; };
 		99DFF8E222891F89000A025A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DFF8E122891F88000A025A /* WebKit.framework */; };
@@ -58,6 +60,8 @@
 		43EF01922269C51500DFD32A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5256F9FCD1DCC49A3E4E59C7 /* Pods_Class03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Class03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F84F65CF270B7702A1184C4 /* Pods_Class03Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Class03Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		994E6056229B895B00AAA540 /* FileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWorker.swift; sourceTree = "<group>"; };
+		994E6058229FA57000AAA540 /* ServiceCategoryContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategoryContext.swift; sourceTree = "<group>"; };
 		9983B88022924E7200CF76E8 /* AsyncRequestWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncRequestWorker.swift; sourceTree = "<group>"; };
 		99B4D3F2227FDEEC0095D780 /* MyBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBrowserViewController.swift; sourceTree = "<group>"; };
 		99DFF8E122891F88000A025A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -129,6 +133,8 @@
 				43EF017C2269C51400DFD32A /* Info.plist */,
 				99B4D3F2227FDEEC0095D780 /* MyBrowserViewController.swift */,
 				9983B88022924E7200CF76E8 /* AsyncRequestWorker.swift */,
+				994E6056229B895B00AAA540 /* FileWorker.swift */,
+				994E6058229FA57000AAA540 /* ServiceCategoryContext.swift */,
 			);
 			path = Class03;
 			sourceTree = "<group>";
@@ -186,7 +192,7 @@
 				43EF01692269C51200DFD32A /* Sources */,
 				43EF016A2269C51200DFD32A /* Frameworks */,
 				43EF016B2269C51200DFD32A /* Resources */,
-				AACEC8A7F9FF3EB6FD9C5749 /* [CP] Embed Pods Frameworks */,
+				96DC00BB3FC7F092C3BB4BC6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -372,7 +378,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AACEC8A7F9FF3EB6FD9C5749 /* [CP] Embed Pods Frameworks */ = {
+		96DC00BB3FC7F092C3BB4BC6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -381,13 +387,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Class03/Pods-Class03-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -402,8 +408,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9983B88122924E7200CF76E8 /* AsyncRequestWorker.swift in Sources */,
+				994E6059229FA57000AAA540 /* ServiceCategoryContext.swift in Sources */,
 				43EF01732269C51200DFD32A /* ViewController.swift in Sources */,
 				99B4D3F3227FDEEC0095D780 /* MyBrowserViewController.swift in Sources */,
+				994E6057229B895B00AAA540 /* FileWorker.swift in Sources */,
 				43EF01712269C51200DFD32A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

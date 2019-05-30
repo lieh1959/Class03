@@ -6,7 +6,8 @@ target 'Class03' do
   use_frameworks!
 
   # Pods for Class03
-  pod 'SwiftyJSON', '~> 4.0'
+  # pod 'SwiftJSON', '~> 4.0'
+  pod 'SQLite.swift', '~> 0.12.0'
   
   target 'Class03Tests' do
     inherit! :search_paths

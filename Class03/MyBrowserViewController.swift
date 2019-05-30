@@ -42,6 +42,10 @@ class MyBrowserViewController: UIViewController,UITextFieldDelegate ,AsyncRepons
         NotificationCenter.default.addObserver(self, selector:
             #selector(keyboardWillDisAppear(notification:)),name:
             UIResponder.keyboardWillHideNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(dataReceived(notification:)), name: Notification.Name(rawValue: "response.received"), object: nil)
+        
+        
     }
     override func viewDidDisappear(_ animated: Bool) {
      super.viewDidDisappear(animated)
@@ -51,6 +55,7 @@ class MyBrowserViewController: UIViewController,UITextFieldDelegate ,AsyncRepons
         
         NotificationCenter.default.removeObserver(self, name:
             UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue:"response.received"), object: nil)
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -87,6 +92,16 @@ class MyBrowserViewController: UIViewController,UITextFieldDelegate ,AsyncRepons
         print("keyboarWillDisAppear")
         self.btnGoBottomConstraint.constant=31;
     }
+    
+    @objc func dataReceived(notification: NSNotification?){
+    guard let responseString = notification?.userInfo?["aaa"] as? String else{
+        return
+    }
+    
+    print(responseString)
+        myWebView.loadHTMLString(responseString,baseURL: URL(string: "https://www.google.com")!)
+    }
+    
     
     /*
     // MARK: - Navigation
